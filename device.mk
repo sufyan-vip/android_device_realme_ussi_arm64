@@ -1,10 +1,4 @@
-#
-# Copyright (C) 2026 The Android Open Source Project
-# Copyright (C) 2026 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
+# device.mk
 LOCAL_PATH := device/realme/ussi_arm64
 
 # A/B
@@ -13,12 +7,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
-
-# Boot control HAL - Removed Static HAL to avoid Build Errors
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
-    bootctrl.ums9230
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
